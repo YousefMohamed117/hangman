@@ -78,7 +78,6 @@ let guessSpans = document.querySelectorAll(".letters-guess span");
 counter = 0;
 trueCounter = 0;
 wins = 0;
-console.log(letterAndSpaces);
 let clickedWord = [];
 document.addEventListener("click", (e) => {
   let status = false;
@@ -147,9 +146,10 @@ function endgame() {
   document.body.appendChild(div);
 }
 
-document.getElementById("reset").onclick = reset()
+document.getElementById("reset").onclick = function(){
+  reset()
+}
  function reset() {
   location.reload();
 }
 
-console.log(reset())
